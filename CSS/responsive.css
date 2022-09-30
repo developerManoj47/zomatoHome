@@ -1,0 +1,398 @@
+/* -------------------------------------------------------------------------------------------------
+                            CSS TO MAKE WEBISTE RESPONSIVE
+-------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width:576px){
+    /* ----------- HEADER ---------- */
+    .navbar {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .navbar-toggler {
+        background: #fff;
+    }
+    .HC-box-1 .logo-wrapper {
+        width: 20rem;
+        margin-top: 4rem;
+    }
+    .HC-box-2 h1 {
+        font-size: 2rem;
+    }
+
+    .HC-box-3 .search-wrapper {
+        width: 45rem;
+    }
+    .HC-box-3 .search-wrapper .SW-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .HC-box-3 .search-wrapper .HC-location{
+        width: 78%;
+        height: 4rem;
+        border-radius: .5rem;
+        padding-left: 0.2rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .HC-box-3 .search-wrapper .HC-location .location-img {
+        padding: 0.4rem;
+    }
+    .HC-box-3 .search-wrapper .HC-search-box {
+        width: 78%;
+        height: 4rem;
+        border-radius: .5rem;
+        margin-top: 2rem;
+    }
+    .HC-box-3 .search-wrapper .HC-search-box .SB-2 {
+        border-radius: .4rem;
+    }
+    .search-icon {
+        border: none;
+    }
+    .HC-box-3 .search-wrapper .HC-search-box .SB-2 input {
+        width: 80%;
+        background: transparent;
+        margin-left: 1.4rem;
+    }
+    /* ------------------- scale images ----------------- */
+    .cstm-card {
+        width: 100%;
+    }
+    /*------ UTILITY CLASS FOR HEADING----- */
+    .heading {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    /* ------/ UTILITY CLASS FOR HEADING ----- */
+
+    /* ----------- COLLCTION -------- */
+    .collection {
+        margin-top: 4rem;
+    }
+    .collection-text {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    /* ---------- POPULAR LOCALITIES ------------ */
+    .Pl-container h1{
+        font-weight: 400;
+    }
+    .localities-boxs {
+        height: 7rem;
+        padding: 1.2rem;
+    }
+    .localities-boxs h3 {
+        font-size: 1.8rem;
+    }
+    .localities-boxs .localities-place {
+        font-size: 1.3rem;
+    }
+    /* --------- PHONE --------- */
+    .phone{
+        margin-top: 6rem;
+        padding-top: 3rem;
+    }
+    .phone-col-2 .get-app h1 {
+        width: 75%;
+        margin: auto;
+        font-size: 3rem;
+    }
+    .phone-col-2 .get-app p{
+        font-size: 1.5rem;
+        width: 43rem;
+        margin-top: 2rem;
+    }
+    .phone-col-2 .get-app .phone-radio {
+        margin-top: 1rem;
+    }
+    .email-input {
+        width: 40rem;
+        height: 3.5rem;
+        margin-top: 1rem;
+    }
+    .email-input input {
+        font-size: 1.6rem;
+    }
+    .email-input button {
+        height: 3.5rem;
+        width: 10rem;
+        font-size: 1.1rem;
+    }
+    .download-app {
+        margin-top: 1.8rem;
+    }
+    .download-app .store-img {
+        width: 9rem;
+        height: 3rem;
+    }
+    /* -------- EXPLORE OPTION --------- */
+    .collaps-wrapper p {
+        min-height: 1.5rem;
+    }
+    .collaps-wrapper button {
+        font-size: 1.6rem;
+    }
+    /* -------- FOOTER --------- */
+    .footer-content-heading {
+        font-size: 1.5rem;
+    }
+    .footer-links a {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width:470px){
+    /* ------------- header content------------- */
+    .HC-box-1 .logo-wrapper {
+        width: 18rem;
+    }
+    .HC-box-2 h1 {
+        font-size: 1.8rem;
+    }
+    .HC-box-3 .search-wrapper .HC-location {
+        width: 25rem;
+        height: 3.5rem;
+        padding-right: .5rem;
+    }
+    .HC-box-3 .search-wrapper .HC-search-box {
+        width: 25rem;
+        height: 3.5rem;
+    } 
+    .search-icon {
+        padding-left: .2rem;
+    }
+    .HC-box-3 .search-wrapper .HC-search-box .SB-2 input{
+        margin-left: .5rem;
+    }
+    /*  ----------- scale images ------------ */
+    .cstm-card {
+        height: 25rem;
+    }
+    .cstm-card-body h3 {
+        font-size: 1.8rem;
+    }
+    .cstm-card-body p {
+        font-size: 1.3rem;
+        letter-spacing: 0.0878;
+    }
+    /* --------- collection section ------------- */
+    .collection-box-wrapper {
+        width: 23rem;
+        height: 30rem;
+    }
+    .cover {
+        width: 23rem;
+        height: 30rem;
+    }
+    /* --------- PHONE --------- */
+    .phone-col-2 .get-app h1 {
+        width: 65%;
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    .phone-col-2 .get-app p{
+        font-size: 1.2rem;
+        width: 30rem;
+        margin-top: 2rem;
+    }
+    .email-input {
+        width: 30rem;
+        min-height: 3.5rem;
+        margin-top: 1rem;
+    }
+    
+    .email-input input {
+        height: 3rem;
+        width: 18rem;
+    }
+
+    .email-input button {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width:576px) and (max-width:648px){
+    .HC-box-1 .logo-wrapper {
+        width: 15rem;
+    }
+    .HC-box-2 h1{
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (max-width:768px){
+    
+    /* --------- POPULAR LOCALITIES -------- */
+    .localities-boxs{
+        height: 7rem;
+    }
+    /* ------ FOOTER ------ */
+    .country-language-btn {
+        width: 10rem;
+        height: 3.5rem;
+    }
+    .country-btn img {
+        width: 2.5rem;
+    }
+    .country-language-btn span {
+        font-size: 1.4rem;
+    }
+ 
+    .footer-links {
+        width: 13rem;
+    }
+    .footer-links a {
+        font-size: 1.3rem;
+    }
+    .store-images .F-store-img {
+        width: 10rem;
+        height: 3rem;
+    }
+
+}
+
+@media only screen and (min-width:576px) and (max-width:992px) {
+
+    /* ---------------HEADER NAVBAR ------------- */
+    .navbar {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar-toggler {
+        background: #fff;
+    }
+
+    .HC-box-1 .logo-wrapper {
+        width: 25rem;
+        margin-top: 5rem;
+    }
+
+    .HC-box-2 h1 {
+        font-size: 3.4rem;
+    }
+
+    .HC-box-3 .search-wrapper {
+        width: 65rem;
+
+    }
+    .HC-box-3 .search-wrapper .HC-location {
+        width: 30rem;
+        /* height: 4rem; */
+    }
+    /*----------- SCALE IMAGES -----------  */
+    .cstm-card-body h3 {
+        font-size: 2.2rem;
+    }
+    .cstm-card-body p {
+        font-size: 1.4rem;
+    }
+
+    /* ------------ utiliity class heading--------- */
+    .heading {
+        font-size: 3.3rem;
+    }
+
+    /* ------------/ utiliity class heading-------- */
+
+    /* ------------ COLLECTION------------- */
+    .collection-text {
+        font-size: 1.6rem;
+    }
+    .collection-box-wrapper,
+    .cover {
+        width: 23rem;
+        height: 28rem;
+    }
+
+    /* --------- POPULAR LOCALITIES -------- */
+    
+    .Pl-container h1 {
+        font-size: 2.8rem;
+    }
+    .localities-boxs h3 {
+        font-size: 1.6rem;
+    }
+    .localities-boxs .localities-place {
+        font-size: 1.2rem;
+    }  
+    .localities-see-more  {
+        font-size: 1.8rem;
+    }
+
+    /* ---------- FOOTER ---------------- */
+    .footer-content-heading {
+        font-size: 1.2rem;
+    }
+    .footer-links a{
+        font-size: 1.1rem;
+    }
+    .copy-right h4 {
+        font-size: 1.2rem;
+    }
+    .copy-right h2{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:992px) {
+
+    /* ----------- SCALE IMAGES ----------- */
+    .cstm-card {
+        width: 30rem;
+    }
+
+    /* ------------ PHONE ------------------ */
+    .phone-col-1 .phone-img {
+        margin-top: 3rem;
+    }
+    .phone-col-2 .get-app h1 {
+        font-size: 3rem;
+    }
+    .phone-col-2 .get-app p {
+        width: 35rem;
+        font-size: 1.4rem;
+    }
+    .phone-radio input {
+        width: 2rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+    }
+    .phone-radio span {
+        font-size: 1.4rem;
+    }
+    .email-input {
+        width: 35rem;
+        height: 3.5rem;
+    }
+    .email-input input {
+        font-size: 1.5rem;
+        border-radius: .4rem;
+    }
+    .email-input button {
+        width: 10rem;
+        height: 3.5rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.023;
+    }
+    .download-app .store-img {
+        width: 10rem;
+        height: 3.5rem;
+    }
+
+    /* ------ FOOTER ------- */
+    .footer-links {
+        width: 13rem;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px){
+    /* ------ scale images ---------- */
+    .cstm-card {
+        width: 40rem;
+    }
+}

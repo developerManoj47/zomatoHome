@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* =================================================================================================
+                            styling of header section 
+==================================================================================================== 
+*/
+/* ---------------- HEADER STYLING ----------------  */
+.header-wrapper {
+    width: 100%;
+    min-height: 41.5rem;
+    position: relative;
+    /* z-index: -1q; */
+    overflow: hidden;
+}
+
+
+.header-wrapper::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/headerBG.avif);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    transform: scale(1.1);
+    z-index: -1;
+    opacity: 1;
+}
+
+.header-wrapper .navbar .coustom-list-wrapper {
+    margin: 1.5rem 2rem 0 3rem;
+}
+
+/* ---------------- NAVBAR STYLING ----------------  */
+
+
+.navbar-brand {
+    /* --------INBUILD CLASS-------- */
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.coustom-list-wrapper .coustom-ul li{
+    font-size: 1.85rem;
+    font-weight: 300;
+    padding-right: 3rem;
+}
+.coustom-list-wrapper .coustom-ul li a{
+    color: #fff;
+}
+
+.coustom-list-wrapper .coustom-ul li:last-child {
+    padding-right: 0;
+}
+.coustom-list-wrapper .coustom-ul li .coustom-btn{
+   text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+            /* -------- LOGIN BOX STYLING -------- */
+
+
+
+/* -------------------- LOGIN MODAL BODY CONTENT STYLING  ------------------- */
+.body-box-1 {
+    border: 2px solid rgb(79, 79, 79, 0.2);
+    width: 100%;
+    height: 4.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.modal-body .body-box-1 .country-code {
+    width: 25%;
+    height: 100;
+    border-right: 1px solid rgb(79, 79, 79, 0.2);
+}
+.modal-body .body-box-1 .country-code .flag-icon img {
+    width: 2.5rem;
+    margin-right: 1.8rem;
+}
+.modal-body .body-box-1 .country-code .input-phone{
+    width: 73%;
+    height: 100%;
+    background-color: redd;
+}
+ .input-phone input {
+    width: 100%;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+}
+.input-phone input::placeholder {
+    color: rgb(79, 79, 79, 0.3);
+}
+.body-box-2 {
+    width: 100%;
+    height: 4.4rem;
+}
+.body-box-2 button {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.body-box-4 { 
+    width: 100%;
+    height: 4.8rem;
+    border: 2px solid rgb(79, 79, 79, 0.2);
+    border-radius: 0.5rem;
+}
+.body-box-4 i {
+    margin-right: 1rem;
+    
+}
+.body-box-4 span {
+    color: rgb(79, 79, 79, 0.9); 
+}
+
+.body-box-5 {
+    margin: 2rem 0 1rem  0;
+}
+.body-box-5 svg {
+    margin-right: 1rem;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& UTILITY CLASSES &&&&&&&&&&&&&&&&&&&&&&&&&& */
+    /*----------- MODAL HEADER CONTENT STYLING------------ */
+
+.cstm-modal-header {
+    border-bottom: none;
+}
+.cstm-header h1{
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(79, 79, 79);
+}
+
+.body-box-divider {
+    margin: 1rem 0 2rem 0;
+    position: relative;
+}
+.body-box-divider .hr-or {
+    position: absolute;
+    top: -18%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 0 1rem;
+}
+
+.modal-footer {
+    border-top: none;
+}
+.modal-footer .modal-footer-box {
+    border-top: 2px solid rgb(79, 79, 79, 0.1);
+}
+.modal-footer .modal-footer-box p {
+    font-size: 1.7rem;
+}
+.modal-footer .modal-footer-box a > span {
+    color: rgb(239, 79, 95);
+}
+
+                /* -------- SIGN UP BOX STYLING -------- */      
+
+
+/* --------------------SIGN UP MODAL BODY CONTENT STYLING------------------- */
+.S-body-box-1 {
+    width: 100%;
+    height: 4.8rem;
+    border: 1px solid rgb(79, 79, 79, 0.2);
+    border-radius: .5rem;
+}
+.S-body-box-1 form {
+    width: 100%;
+    height: 100%;
+}
+.S-body-box-1 form input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    border-radius: .5rem;
+}
+.S-body-box-1 input:focus {
+    border: 1px solid #06d6a0;
+}
+.S-body-box-1 input::placeholder {
+    font-size: 2.1rem;
+    font-weight: 400;
+    color: rgb(79, 79, 79, 0.4);
+}
+
+.S-body-box-2 {
+    margin: 2rem 0;
+}
+.S-body-box-3 .checkbox {
+    cursor: pointer;
+    outline: 0px;
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 3rem;
+    height: 1.8rem;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(156, 156, 156);
+    box-sizing: border-box;
+    position: relative;
+}
+.S-body-box-3 .checkbox {
+    accent-color: rgb(239, 79, 95);
+}
+.S-body-box-3 > span {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.S-body-box-3 .red-text {
+    color: rgb(239, 79, 95);
+}
+
+.S-body-box-4 {
+    width: 100%;
+    height: 4.6rem;
+}
+.S-body-box-4 button {
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+}
+
+/* ---------------------------------- styling of header content logo search bar etc ----------------------------- */
+
+.HC-box-wrapper {
+    max-width: 90rem;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HC-box-1 .logo-wrapper {
+    width: 28rem;
+    margin-bottom: 3rem;
+}
+.HC-box-1 .logo-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.HC-box-2 h1{
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.HC-box-3 .search-wrapper {
+    max-width: 75rem;
+    height: 5.5rem;
+    border-radius: .6rem;
+    margin-top: 3rem;
+    /* padding: 0.8rem 0.9rem; */
+}
+.HC-box-3 .search-wrapper .SW-2{
+    width: 100%;
+    height: 100%;
+}
+.HC-box-3 .search-wrapper .HC-location {
+    width: 30rem;
+    border-radius: .6rem 0 0 .6rem;
+    padding-left: 1rem;
+
+    /* border-right: 2px solid rgb(156, 156, 156); */
+}
+.HC-box-3 .search-wrapper .HC-location .location-img{
+    padding-right: 0.8rem;
+}
+.HC-box-3 .search-wrapper .HC-location input{
+    width: 70%;
+    height: 3rem;
+    margin-right: 2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.5rem;
+}
+
+/* =-=-0-=0=-0=-9009=09-09=-09-=09=-0-09-099-009-09=-09-09-09-09-=09-09-09-9-09-09-09- */
+/* .HC-box-3 .search-wrapper .search-bar-divider {
+        margin: 0 0;
+        height: rem;
+} */
+
+.HC-box-3 .search-wrapper .HC-search-box {
+    width: 69rem;
+    border-radius: 0 .6rem .6rem 0;
+}
+.HC-box-3 .search-wrapper .HC-search-box .SB-2 {
+    height: 100%;    
+    border-radius: 0 .6rem .6rem 0;   
+}
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-left: 2px solid rgba(128, 128, 128, 0.5);
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+.HC-box-3 .search-wrapper .HC-search-box .SB-2 input {
+    width: 90%;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+}
+
+/* 
+================================================================================================================
+                                STYLING OF SECTION SCALE IMAGE   
+=============================================================================================================== 
+*/
+
+
+.cstm-card {
+    width: 55rem;
+    height: 30rem;
+    /* background: red; */
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.cstm-card:hover {
+    transform: scale(1.05);
+}
+.cstm-card img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+
+}
+.cstm-card-body {
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    top: 67%;
+    left: 0;
+    background: #fff;
+    padding: 2rem 0 0 2rem;
+}
+.cstm-card-body h3 {
+    font-size: 2.5rem;
+    color: rgb(54, 54, 54);
+}
+.cstm-card-body p {
+    font-size: 1.8rem;
+    color: rgb(79, 79, 79);
+}
+
+/* 
+================================================================================================================
+                                STYLING OF SECTION COLLECTION   
+=============================================================================================================== 
+*/
+
+.collection {
+    margin-top: 7rem;
+}
+.collection-text {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.cstm-collection-row-2 {
+    margin-top: 2rem;
+}
+/* .collection-row2-col-1 {
+   
+} */
+.collection-box-wrapper {
+    width: 27rem;
+    height: 34rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+.cover {
+    width: 27rem;
+    height: 34rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    border-radius: .6rem;
+    z-index: 2;
+}
+.collection-box-1-wrapper {
+    background: url(../images/collectionImg1.avif) center no-repeat;
+    background-size: cover;
+}
+
+.collection-box-2-wrapper {
+    background: url(../images/collectionImg2.avif) center no-repeat;
+    background-size: cover;
+}
+.collection-box-3-wrapper {
+    background: url(../images/collectionImg3.avif) center no-repeat;
+    background-size: cover;
+}
+.collection-box-4-wrapper {
+    background: url(../images/collectionImg4.avif) center no-repeat;
+    background-size: cover;
+}
+
+.common-collection-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    z-index: 5;
+}
+.common-collection-box h4{
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.common-collection-box h5 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& UTILITY CLASSES &&&&&&&&&&&&&&&&&&&&&&&&&& */
+.heading {
+    font-size: 3.8rem;
+    font-weight: 400;
+}
+
+/* 
+================================================================================================================
+                                STYLING OF SECTION POPULAR LOVALITIES   
+=============================================================================================================== 
+*/
+
+.Pl-container {
+    margin-top: 10rem;
+}
+.Pl-container h1 {
+    font-weight: 300;
+}
+.localities-boxs {
+    width: 98%;
+    height: 8rem;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+.localities-boxs:hover{
+    box-shadow: 1px 1px 9px 1px rgba(128, 128, 128, 0.2);
+}
+.localities-boxs h3 {
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+.localities-boxs .localities-place {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: gray;
+}
+
+.localities-see-more {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+.see-more-icon {
+    margin: 0.6rem 0 0 1rem;
+}
+
+/* 
+================================================================================================================
+                                STYLING OF SECTION PHONE   
+=============================================================================================================== 
+*/
+
+.phone-wrapper {
+    width: 100%;
+    height: 50rem;
+    background-color: rgb(255, 251, 247);
+}
+.phone {
+    margin-top: 10rem;
+    padding-top: 5rem;
+    display: flex;
+}
+.phone-col-1 {
+    width: 40%;
+    min-height:40rem;
+}
+.phone-col-1 .phone-img {
+    width: 24rem;
+    height: 26rem;
+    margin-top: 8rem;
+}
+.phone-col-1 .phone-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.phone-col-2 .get-app h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.phone-col-2 .get-app p {
+    width: 48rem;
+    margin-top: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.6);
+}
+.phone-col-2 .get-app .phone-radio {
+    margin-top: 2.5rem;
+}
+.phone-radio input {
+    width: 3rem;
+    height: 2rem;
+}
+.phone-radio input {
+    accent-color: rgb(239, 79, 95);
+}
+.phone-radio span {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.email-input {
+    width: 50rem;
+    min-height: 4.5rem;
+    margin-top: 2rem;
+    /* background-color: red; */
+}
+.email-input input {
+    width: 65%;
+    height: 100%;
+    padding-left: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: .6rem;
+    border: 1px solid black;
+    outline: none;
+}
+.email-input input:focus {
+    border: 1px solid #06d6a0;
+}
+.email-input button {
+    height: 4.5rem;
+    width: 15rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.download-app {
+    margin-top: 2.5rem;
+}
+.download-app h5 {
+    font-size: 1.5rem;
+    color: gray;
+    letter-spacing: 0.0467rem;
+}
+.download-app .store-img {
+    width: 15rem;
+    height: 4rem;
+    margin-right: 2rem;
+}
+.download-app .store-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+==========================================================================================================
+                                STYLING OF SECTION Explore option    
+===========================================================================================================
+*/
+.explore-option-wrapper {
+    background: rgb(252, 252, 252);
+}
+.collaps-wrapper {
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: .6rem;
+    padding: 1.4rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.collaps-wrapper p{
+    width: 100%;
+    min-height: 2rem;
+}
+.collaps-wrapper button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    opacity: 0.5;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: none;
+}
+ .CS-card-body p{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: gray;
+    
+}
+/* 
+==========================================================================================================
+                                STYLING OF FOOTER   
+===========================================================================================================
+*/
+.footer {
+    background: rgb(248, 248, 248);
+    min-height: 50rem;
+}
+
+.cstm-footer-container {
+    margin-top: 6rem;
+    padding-top: 5rem;
+}
+.cstm-f-row-1 .logoDark {
+    width: 14rem;
+    height: 3rem;
+}
+.cstm-f-row-1 .logoDark img {
+    width: 100%;
+    height: 100%;
+}
+
+.country-language-btn {
+    width: 12rem;
+    height: 4rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .6rem;
+    cursor: pointer;
+}
+.country-btn img {
+    width: 3rem;
+    height: 2rem;
+}
+.country-language-btn span {
+    font-size: 1.8rem;
+}
+
+.cstm-f-row-2 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.footer-content-heading {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.footer-links {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+}
+.footer-links a {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.store-images .F-store-img {
+    width: 13rem;
+    height: 4rem;
+}
+.store-images .F-store-img img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>Zomato</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+
+    <!-- ---------------- BOOTSTRAP CDN LINK ------------------------ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- ---------------- COUSTOM CSS LINKS ------------------------ -->
+    <link rel="stylesheet" href="CSS/style2.css">
+    <!-- ---------------- RESPONSIVE CSS LINKS --------------------- -->
+    <link rel="stylesheet" media="screen and ( max-width:1200px)" href="./CSS/responsive.css">
+    <!-- -------------------- FONT AWESOME LINK------------------ -->
+    <script src="https://kit.fontawesome.com/40f6cd88f1.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse coustom-list-wrapper" id="navbarTogglerDemo01">    
+
+                    <!-- ---------NAVBAR BRAND---------- -->
+                    <a class="navbar-brand text-light" href="https://www.zomato.com/mobile">
+                        <i class="sc-rbbb40-1 iFnyeo sc-cmjSyW btJfbw" size="10" color="#FFFFFF"><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="10" height="10"
+                                viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                class="navbar-svg">
+                                <title>download-app</title>
+                                <path
+                                    d="M18.5793 9.18939H16.5865H16.3199C15.7307 9.18939 15.2529 9.6672 15.2529 10.2583V10.3742C15.2529 10.9659 15.7307 11.444 16.3207 11.444H18.3156H18.5793C19.1696 11.444 19.6488 10.9639 19.6488 10.3742L19.6477 10.2569C19.6488 9.6672 19.1696 9.18939 18.5793 9.18939Z">
+                                </path>
+                                <path
+                                    d="M18.5804 6.52262H18.1097V1.35122C18.1097 0.607964 17.5017 0 16.7582 0H7.84167C7.09841 0 6.49045 0.608249 6.49045 1.35122V5.06151C4.69196 6.07821 2.83696 7.14029 2.83296 7.14286C1.82597 7.5573 0.350586 8.89453 0.350586 12.0522C0.350586 12.3342 0.369139 12.5945 0.395113 12.846C0.40339 12.9197 0.412524 12.9904 0.422514 13.0615C0.448488 13.2462 0.481027 13.4229 0.519845 13.5907C0.533831 13.6506 0.544678 13.7131 0.559805 13.7705C0.612039 13.9646 0.67255 14.1467 0.740482 14.32C0.774733 14.4059 0.811839 14.4841 0.84923 14.5646C0.88919 14.6494 0.929436 14.7327 0.972535 14.8106C1.02249 14.9045 1.07244 14.995 1.12724 15.0809C1.14037 15.1009 1.15464 15.1192 1.16805 15.1394C2.46847 17.1052 4.8675 17.114 4.8675 17.114H6.49045V18.6494C6.49045 19.3918 7.09841 19.9997 7.84167 19.9997H16.7579C17.5014 19.9997 18.1094 19.3915 18.1094 18.6494V16.7767H18.3155V16.7755H18.5784C19.1695 16.7755 19.6487 16.2974 19.6476 15.7063L19.6487 15.5898C19.6476 14.9996 19.1695 14.5229 18.5792 14.5229H18.3155H16.5861H16.3195C15.7292 14.5229 15.2525 15.0007 15.2525 15.5907V15.7091C15.2525 16.2977 15.7304 16.7775 16.3203 16.7775H17.1692V17.5008H7.43036V7.79877C7.91959 7.48851 8.37256 7.18995 8.63088 6.98987C9.93957 5.97774 11.1818 5.17169 11.3499 4.4407C11.5688 3.49222 10.8407 2.69302 9.57765 3.34922C9.17976 3.55587 8.36315 4.00885 7.43036 4.53261V2.14129L17.1692 2.14271V6.52205H16.5861V6.52319H16.3209C15.7304 6.52319 15.2511 7.001 15.2511 7.59269V7.70858C15.2511 8.29999 15.7303 8.77665 16.3195 8.77665H16.5846H18.3141H18.5798C19.1695 8.77665 19.6476 8.29884 19.6476 7.70858V7.58955C19.6487 7.00186 19.1709 6.52262 18.5804 6.52262ZM12.2986 17.9752C12.6731 17.9752 12.9751 18.2774 12.9751 18.6511C12.9751 19.0255 12.6728 19.3267 12.2986 19.3267C11.9256 19.3267 11.6242 19.0247 11.6242 18.6511C11.6247 18.2786 11.927 17.9752 12.2986 17.9752ZM13.7266 1.30098H10.8735C10.7839 1.30098 10.7097 1.2282 10.7097 1.13829C10.7097 1.04695 10.7839 0.974169 10.8735 0.974169H13.7266C13.8163 0.974169 13.8893 1.04667 13.8893 1.13829C13.8893 1.22792 13.8163 1.30098 13.7266 1.30098Z">
+                                </path>
+                                <path
+                                    d="M18.5788 11.8561H18.3151H16.3193C15.7302 11.8561 15.251 12.3353 15.251 12.9253V13.0423C15.251 13.6329 15.7291 14.1107 16.3193 14.1107H16.5845H18.3139H18.5782C19.1693 14.1107 19.646 13.6329 19.6474 13.0423V12.9253C19.6472 12.3353 19.1705 11.8561 18.5788 11.8561Z">
+                                </path>
+                            </svg></i>
+                        Get the App
+                    </a>
+                    <!-- ------------------------------- -->
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 coustom-ul">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Investor Relations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Add restaurant</a>
+                        </li>
+
+                        <!-- -----------log in list item---------  -->
+                        <li class="nav-item">
+                            <!-- Button trigger modal -->
+                            <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                Log in
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="loginModal" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="loginModalLabel" aria-hidden="true">
+                                <div class="modal-dialog ">
+                                    <div class="modal-content">
+                                        <div class="modal-header p-4 cstm-modal-header">
+                                            <h1 class="modal-title" id="loginModalLabel">Login</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body p-4 w-100">
+                                            <div class="body-box-1">
+                                                <div class="d-flex align-items-center w-100 h-100">
+                                                    <div
+                                                        class="d-flex justify-content-center align-items-center  country-code">
+                                                        <div>
+                                                            <div class="flag-icon">
+                                                                <img src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp"
+                                                                    alt="india">
+                                                                <span>+91</span>
+                                                            </div>
+                                                        </div>
+                                                        <i class="sc-rbbb40-1 fDHLHG sc-1rq4z74-3 bLxZbt" size="16"
+                                                            color="#1C1C1C"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                fill="#1C1C1C" width="16" height="16"
+                                                                viewBox="0 0 20 20"
+                                                                aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                                                role="img" class="sc-rbbb40-0 cdAyKd">
+                                                                <title>chevron-down</title>
+                                                                <path
+                                                                    d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                                                </path>
+                                                            </svg></i>
+                                                    </div>
+                                                    <div class="input-phone">
+                                                        <input type="tel" placeholder="Phone">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="body-box-2 w-100">
+                                                <button class="btn btn-danger btn-lg w-100 h-100">Send One Time
+                                                    Password</button>
+                                            </div>
+                                            <div class="body-box-divider d-flex ">
+                                                <hr width="100%" />
+                                                <span class="hr-or">or</span>
+                                            </div>
+                                            <div class="body-box-4 d-flex justify-content-center align-items-center">
+                                                <i class="sc-rbbb40-1 fDHLHG" color="#EF4F5F" size="24"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" fill="#EF4F5F" width="24"
+                                                        height="24" viewBox="0 0 20 20"
+                                                        aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                                        class="sc-rbbb40-0 cdktuZ">
+                                                        <title>mail-fill</title>
+                                                        <path
+                                                            d="M10 9.58c-1.62 0-10-4.76-10-4.76v-0.74c0-0.92 0.74-1.66 1.66-1.66h16.68c0.92 0 1.66 0.74 1.66 1.66l-0.020 0.84c0 0-8.28 4.66-9.98 4.66zM10 11.86c1.78 0 9.98-4.46 9.98-4.46l0.020 10c0 0.92-0.74 1.66-1.66 1.66h-16.68c-0.92 0-1.66-0.74-1.66-1.66l0.020-10c0 0 8.36 4.46 9.98 4.46z">
+                                                        </path>
+                                                    </svg></i>
+                                                <span>Continue with Email</span>
+                                            </div>
+                                            <div
+                                                class="body-box-5 body-box-4 d-flex justify-content-center align-items-center">
+                                                <div>
+                                                    <svg width="24" height="24" viewBox="0 0 22 22" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.87566 13.2946L4.10987 16.1534L1.31093 16.2126C0.474461 14.6611 0 12.886 0 10.9997C0 9.17565 0.443609 7.45552 1.22994 5.94092H1.23054L3.72238 6.39776L4.81396 8.87465C4.5855 9.54071 4.46097 10.2557 4.46097 10.9997C4.46106 11.8072 4.60732 12.5808 4.87566 13.2946Z"
+                                                            fill="#FBBB00"></path>
+                                                        <path
+                                                            d="M21.8082 8.94507C21.9345 9.61048 22.0004 10.2977 22.0004 11C22.0004 11.7875 21.9176 12.5557 21.7598 13.2967C21.2243 15.8183 19.8252 18.0201 17.8869 19.5782L17.8863 19.5776L14.7477 19.4175L14.3035 16.6445C15.5896 15.8902 16.5947 14.7098 17.1242 13.2967H11.2422V8.94507H17.21H21.8082Z"
+                                                            fill="#518EF8"></path>
+                                                        <path
+                                                            d="M17.8865 19.5778L17.8871 19.5784C16.002 21.0937 13.6073 22.0002 11.0006 22.0002C6.81152 22.0002 3.16945 19.6588 1.31152 16.2132L4.87625 13.2952C5.8052 15.7744 8.19679 17.5392 11.0006 17.5392C12.2057 17.5392 13.3348 17.2134 14.3036 16.6447L17.8865 19.5778Z"
+                                                            fill="#28B446"></path>
+                                                        <path
+                                                            d="M18.0208 2.53241L14.4573 5.44981C13.4546 4.82307 12.2694 4.46102 10.9996 4.46102C8.13229 4.46102 5.69596 6.30682 4.81356 8.87494L1.23009 5.9412H1.22949C3.06022 2.41154 6.74823 0 10.9996 0C13.6686 0 16.1158 0.950726 18.0208 2.53241Z"
+                                                            fill="#F14336"></path>
+                                                    </svg>
+                                                    <span>Continue with Google</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer  p-4 ">
+                                            <div
+                                                class="modal-footer-box d-flex justify-content-end align-items-center w-100 h-100 pt-4">
+                                                <p class="me-auto ">
+                                                    New to Zomato?
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                                        <span>Create account</span>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ---------- / log in list item---------  -->
+
+                        <!-- -----------sign up list item---------  -->
+                        <li class="nav-item">
+                            <!-- Button trigger modal -->
+                            <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                Sign up
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="signupModal" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="signupModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header cstm-modal-header p-4">
+                                            <h1 class="modal-title" id="signupModalLabel">Sign up</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body p-4">
+                                            <div class="S-body-box-1">
+                                                <form action="#">
+                                                    <input type="text" placeholder="Full Name" required>
+                                                </form>
+                                            </div>
+                                            <div class="S-body-box-2 S-body-box-1">
+                                                <form action="#">
+                                                    <input type="email" placeholder="Email" required>
+                                                </form>
+                                            </div>
+                                            <div class="S-body-box-3">
+                                                <input type="checkbox" class="checkbox">
+                                                <span>
+                                                    I agree to Zomato's <span class="red-text">Terms of Service, Privacy
+                                                        Policy</span>
+                                                    and <span class="red-text">Content Policies</span>
+                                                </span>
+                                            </div>
+                                            <div class="S-body-box-4">
+                                                <button class="btn btn-danger btn-lg " disabled>Create account</button>
+                                            </div>
+                                            <div class="body-box-divider d-flex ">
+                                                <hr width="100%" />
+                                                <span class="hr-or">or</span>
+                                            </div>
+                                            <div
+                                                class="body-box-5 body-box-4 d-flex justify-content-center align-items-center">
+                                                <div>
+                                                    <svg width="24" height="24" viewBox="0 0 22 22" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.87566 13.2946L4.10987 16.1534L1.31093 16.2126C0.474461 14.6611 0 12.886 0 10.9997C0 9.17565 0.443609 7.45552 1.22994 5.94092H1.23054L3.72238 6.39776L4.81396 8.87465C4.5855 9.54071 4.46097 10.2557 4.46097 10.9997C4.46106 11.8072 4.60732 12.5808 4.87566 13.2946Z"
+                                                            fill="#FBBB00"></path>
+                                                        <path
+                                                            d="M21.8082 8.94507C21.9345 9.61048 22.0004 10.2977 22.0004 11C22.0004 11.7875 21.9176 12.5557 21.7598 13.2967C21.2243 15.8183 19.8252 18.0201 17.8869 19.5782L17.8863 19.5776L14.7477 19.4175L14.3035 16.6445C15.5896 15.8902 16.5947 14.7098 17.1242 13.2967H11.2422V8.94507H17.21H21.8082Z"
+                                                            fill="#518EF8"></path>
+                                                        <path
+                                                            d="M17.8865 19.5778L17.8871 19.5784C16.002 21.0937 13.6073 22.0002 11.0006 22.0002C6.81152 22.0002 3.16945 19.6588 1.31152 16.2132L4.87625 13.2952C5.8052 15.7744 8.19679 17.5392 11.0006 17.5392C12.2057 17.5392 13.3348 17.2134 14.3036 16.6447L17.8865 19.5778Z"
+                                                            fill="#28B446"></path>
+                                                        <path
+                                                            d="M18.0208 2.53241L14.4573 5.44981C13.4546 4.82307 12.2694 4.46102 10.9996 4.46102C8.13229 4.46102 5.69596 6.30682 4.81356 8.87494L1.23009 5.9412H1.22949C3.06022 2.41154 6.74823 0 10.9996 0C13.6686 0 16.1158 0.950726 18.0208 2.53241Z"
+                                                            fill="#F14336"></path>
+                                                    </svg>
+                                                    <span>Continue with Google</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer p-4">
+                                            <div
+                                                class="modal-footer-box d-flex justify-content-end align-items-center w-100 h-100 pt-4">
+                                                <p class="me-auto ">
+                                                    Already have an account?
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                                        <span>Log in</span>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ----------- / sign up list item---------  -->
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- -------------------------- HEADER CONTENT LOGO AND SEARCH-BAR SECTION ----------------------------- -->
+        <div class="header-content">
+            <div class="HC-box-wrapper m-md-auto mt-sm-3 mt-md-0 ">
+                <div class="HC-box-1">
+                    <div class="logo-wrapper">
+                        <img src="./images/logo.avif" alt="">
+                    </div>
+                </div>
+                <div class="HC-box-2">
+                    <h1>Discover the best food & drinks in jodhpur </h1>
+                </div>
+                <div class="HC-box-3">
+                    <div class="search-wrapper">
+                        <div class="SW-2 d-flex ">
+                            <div class="HC-location d-flex bg-light align-items-center">
+                                <div class="location-img">
+                                    <i class="sc-rbbb40-1 iFnyeo" color="#FF7E8B" size="20">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="20" height="20"
+                                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                            role="img" class="sc-rbbb40-0 iRDDBk">
+                                            <title>location-fill</title>
+                                            <path
+                                                d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z">
+                                            </path>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <input type="text" placeholder="Sector-c Sastri Nagar">
+                                <i class="sc-rbbb40-1 iFnyeo sc-fvLVrH fnfGJZ" color="#4F4F4F" size="12">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#4F4F4F" width="12" height="12"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 ezrcri">
+                                        <title>down-triangle</title>
+                                        <path d="M20 5.42l-10 10-10-10h20z"></path>
+                                    </svg>
+                                </i>
+                            </div>
+                            <div class="HC-search-box  ">
+                                <div class="SB-2 d-flex align-items-center bg-light">
+                                    <div class="search-icon">
+                                        <i class="sc-rbbb40-1 iFnyeo" color="#828282" size="18">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#828282" width="18"
+                                                height="18" viewBox="0 0 20 20"
+                                                aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                                class="sc-rbbb40-0 iwHbVQ">
+                                                <title>Search</title>
+                                                <path
+                                                    d="M19.78 19.12l-3.88-3.9c1.28-1.6 2.080-3.6 2.080-5.8 0-5-3.98-9-8.98-9s-9 4-9 9c0 5 4 9 9 9 2.2 0 4.2-0.8 5.8-2.1l3.88 3.9c0.1 0.1 0.3 0.2 0.5 0.2s0.4-0.1 0.5-0.2c0.4-0.3 0.4-0.8 0.1-1.1zM1.5 9.42c0-4.1 3.4-7.5 7.5-7.5s7.48 3.4 7.48 7.5-3.38 7.5-7.48 7.5c-4.1 0-7.5-3.4-7.5-7.5z">
+                                                </path>
+                                            </svg>
+                                        </i>
+                                    </div>
+                                    <input type="text" placeholder="Search for restaurant, cuisin or a dish">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="scale-images-section mt-5">
+        <div class="scale-images d-flex justify-content-center container px-5 px-sm-0">
+            <div class="row">
+                <div class=" col-12 col-md-6 SI-box-1 ">
+                    <div class="cstm-card ">
+                        <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                            alt="food image">
+
+                        <div class="cstm-card-body">
+                            <h3 class="">Order online</h3>
+                            <p class="">
+                                Stay home and order to you doorstep
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-12 col-md-6 SI-box-2 mt-5 mt-md-0">
+                    <div class="cstm-card">
+                        <img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                            alt="food image">
+
+                        <div class="cstm-card-body">
+                            <h3 class="">Dining</h3>
+                            <p class="">
+                                View the city's favourite venues
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collection">
+        <div class="collection-wrapper container px-5 px-sm-0">
+            <div class="row ">
+                <h1 class="heading">Collections</h1>
+                <p class="collection-text">
+                    Explore curated lists of top restaurants, cafes, pubs, and bars in Jodhpur, based on trends
+                </p>
+            </div>
+            <div class="row  cstm-collection-row-2 ">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 ms-sm-1 ms-md-0 collection-row2-col  position-relative">
+                    <div class="collection-box-wrapper collection-box-1-wrapper ">
+                        <div class="common-collection-box collection-box-1">
+                            <h4>Best of Jodhpur</h4>
+                            <h5>4 places</h5>
+                        </div>
+                    </div>
+                    <div class="cover position-absolute top-0 left-0"></div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-5 mt-md-0 collection-row2-col  position-relative">
+                    <div class="collection-box-wrapper collection-box-2-wrapper ">
+                        <div class="common-collection-box collection-box-2">
+                            <h4>Trending This Week</h4>
+                            <h5>26 places</h5>
+                        </div>
+                    </div>
+                    <div class="cover position-absolute top-0 left-0"></div>
+                </div>
+                <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-3 ms-sm-1 ms-md-0 mt-5 mt-lg-0 collection-row2-col  position-relative">
+                    <div class="collection-box-wrapper collection-box-3-wrapper ">
+                        <div class="common-collection-box collection-box-3">
+                            <h4>Sweet Tooth</h4>
+                            <h5>11 places</h5>
+                        </div>
+                    </div>
+                    <div class="cover position-absolute top-0 left-0"></div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-5 mt-xl-0 collection-row2-col  position-relative">
+                    <div class="collection-box-wrapper collection-box-4-wrapper ">
+                        <div class="common-collection-box collection-box-4">
+                            <h4>Royal Rajsthani Cuisine</h4>
+                            <h5>8 places</h5>
+                        </div>
+                    </div>
+                    <div class="cover position-absolute top-0 left-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <seciton class="popular-localities">
+        <div class="container Pl-container px-5 px-sm-0">
+            <div class="row">
+                <h1 class="heading">Popular localities in and around Jodhpur</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex  justify-content-between">
+                            <div class="localities-text">
+                                <h3>Sardarpura</h3>
+                                <span class="localities-place">388 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Chopasni Housing Board</h3>
+                                <span class="localities-place">338 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4 mt-md-0">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Basni</h3>
+                                <span class="localities-place">256 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Paota</h3>
+                                <span class="localities-place">255 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Ratanada</h3>
+                                <span class="localities-place">230 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Shastri Nagar</h3>
+                                <span class="localities-place">215 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Rawaton ka bass</h3>
+                                <span class="localities-place">143 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-between">
+                            <div class="localities-text">
+                                <h3>Air Force Area</h3>
+                                <span class="localities-place">93 places</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="sc-rbbb40-1 iFnyeo sc-AhSAr cRQNUa" size="15" color="#1C1C1C"><svg
+                                        xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 jKmKoK">
+                                        <title>chevron-right</title>
+                                        <path
+                                            d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="localities-boxs">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="localities-see-more">see more</span>
+                            <span class="see-more-icon" color="#1C1C1C"><svg xmlns="http://www.w3.org/2000/svg"
+                                    fill="#1C1C1C" width="18" height="18" viewBox="0 0 20 20"
+                                    aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 iwHbVQ">
+                                    <title>chevron-down</title>
+                                    <path
+                                        d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </seciton>
+
+    <section class="phone-wrapper">
+        <div class="container phone px-5 px-sm-0">
+            <div class="phone-col-1 d-none d-sm-none d-md-block">
+                <div class="phone-img ms-auto">
+                    <img src="./images/phone.avif" alt="phone image">
+                </div>
+            </div>
+            <div class="phone-col-2">
+                <div class="get-app ms-0 ms-md-5">
+                    <h1 class="heading">Get the Zomato app</h1>
+                    <p>
+                        We will send you a link, open it on your phone to download the app
+                    </p>
+                    <div class="phone-radio">
+                        <span class="d-inline-flex align-items-center me-5 me-md-0 me-lg-5">
+                            <input type="radio">
+                            Email
+                        </span>
+                        <span class="d-inline-flex align-items-center ms-5">
+                            <input type="radio">
+                            Phone
+                        </span>
+                    </div>
+                    <div class="email-input d-flex align-items-center">
+                        <input type="email" placeholder="Email">
+                        <button class="btn btn-danger btn-lg ms-auto">Share App Link</button>
+                    </div>
+                    <div class="download-app">
+                        <h5>Download app from</h5>
+                        <div class="d-flex mt-4">
+                            <div class="store-img">
+                                <img src="./images/playstor.webp" alt="">
+                            </div>
+                            <div class="store-img">
+                                <img src="./images/appstore.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="explore-option-wrapper">
+        <div class="explore-option container px-5 px-sm-0">
+            <div class="row">
+                <h1 class="heading">Explore options near me</h1>
+            </div>
+            <div class="row pt-5">
+                <div class="collaps-wrapper ">
+                    <p>
+                        <button class="cstm-explore-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSection1" aria-expanded="false" aria-controls="collapseSection1">
+                            Popular cuisines near me
+                            <i class="sc-rbbb40-1 iFnyeo sc-ixe81d-3 ipHUyL" color="#1C1C1C" tabindex="-1"
+                                aria-hidden="true" size="20">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 iRDDBk">
+                                    <title>chevron-down</title>
+                                    <path
+                                        d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                    </path>
+                                </svg>
+                            </i>
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseSection1">
+                        <div class="CS-card-body">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, eaque! Velit corrupti ea
+                                voluptatem minus aperiam accusantium, maiores enim earum laboriosam tenetur, ad quos
+                                neque, repudiandae quod quis! Nobis odit, laudantium id ipsum, sed facere culpa vel,
+                                sint magni suscipit quaerat ducimus natus?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="collaps-wrapper ">
+                    <p>
+                        <button class="cstm-explore-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSection2" aria-expanded="false" aria-controls="collapseSection2">
+                            Popular restaurant types near me
+                            <i class="sc-rbbb40-1 iFnyeo sc-ixe81d-3 ipHUyL" color="#1C1C1C" tabindex="-1"
+                                aria-hidden="true" size="20">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 iRDDBk">
+                                    <title>chevron-down</title>
+                                    <path
+                                        d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                    </path>
+                                </svg>
+                            </i>
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseSection2">
+                        <div class="CS-card-body">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, a adipisci. Architecto
+                                voluptatem quia beatae vero est minus ullam temporibus autem laborum? Excepturi
+                                distinctio facilis non dolore aliquam? Vitae voluptatum dicta modi hic necessitatibus!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="collaps-wrapper ">
+                    <p>
+                        <button class="cstm-explore-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSection3" aria-expanded="false" aria-controls="collapseSection3">
+                            Cities We Deliver To
+                            <i class="sc-rbbb40-1 iFnyeo sc-ixe81d-3 ipHUyL" color="#1C1C1C" tabindex="-1"
+                                aria-hidden="true" size="20">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 iRDDBk">
+                                    <title>chevron-down</title>
+                                    <path
+                                        d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                    </path>
+                                </svg>
+                            </i>
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseSection3">
+                        <div class="CS-card-body">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique impedit eligendi,
+                                incidunt inventore nobis at quae accusamus ipsum explicabo repellat a quaerat autem
+                                facilis accusantium nihil maiores excepturi eos delectus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"> 
+        <div class="container px-5 px-sm-0 cstm-footer-container">
+            <div class="row cstm-f-row-1">
+                <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center justify-content-sm-between ">
+                    <div class="logoDark">
+                        <img src="./images/logoDark.avif" alt="zomato dark logo">
+                    </div>
+                    <div class="d-flex flex-wrap">
+                        <div class="country-btn country-language-btn mt-3 mt-sm-0 me-3 me-sm-0 d-flex align-items-center justify-content-between">
+                            <img src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp" alt="india">
+                            <span>India</span>
+                            <i class="sc-rbbb40-1 iFnyeo" size="15" color="#1C1C1C"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 jKmKoK">
+                                    <title>chevron-down</title>
+                                    <path
+                                        d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                    </path>
+                                </svg></i>
+                        </div>
+                        <div
+                            class="language-btn country-language-btn mt-3 mt-sm-0 ms-0 ms-sm-4 d-flex align-items-center justify-content-between">
+                            <i class="sc-rbbb40-1 iFnyeo" size="18" color="#1C1C1C"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="18" height="18"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 iwHbVQ">
+                                    <title>language-globe</title>
+                                    <path
+                                        d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.523 0 10-4.477 10-10v0c-0.011-5.518-4.482-9.989-9.999-10h-0.001zM17.14 6.18h-3c-0.264-1.393-0.63-2.62-1.107-3.791l0.047 0.131c1.755 0.733 3.161 2.010 4.039 3.618l0.021 0.042zM18.1 10c-0.002 0.676-0.090 1.33-0.252 1.954l0.012-0.054h-3.44c0.059-0.57 0.092-1.231 0.092-1.9s-0.034-1.33-0.099-1.982l0.007 0.082h3.44c0.15 0.57 0.238 1.224 0.24 1.899v0.001zM1.9 10c0.002-0.676 0.090-1.33 0.252-1.954l-0.012 0.054h3.46c-0.059 0.57-0.092 1.231-0.092 1.9s0.034 1.33 0.099 1.982l-0.007-0.082h-3.46c-0.15-0.57-0.238-1.224-0.24-1.899v-0.001zM7.48 8.1h5.040c0.063 0.57 0.099 1.231 0.099 1.9s-0.036 1.33-0.107 1.981l0.007-0.081h-5.040c-0.063-0.57-0.099-1.231-0.099-1.9s0.036-1.33 0.107-1.981l-0.007 0.081zM10.76 1.9c0.603 1.228 1.106 2.657 1.436 4.152l0.024 0.128h-4.44c0.354-1.623 0.857-3.052 1.51-4.395l-0.050 0.115c0.24 0 0.5 0 0.76 0s0.48 0 0.76 0zM6.96 2.48c-0.445 1.051-0.825 2.291-1.079 3.576l-0.021 0.124h-3c0.899-1.65 2.305-2.927 4.007-3.64l0.053-0.020zM2.86 13.8h3c0.262 1.4 0.629 2.634 1.107 3.811l-0.047-0.131c-1.757-0.738-3.165-2.022-4.039-3.637l-0.021-0.043zM9.24 18.1c-0.605-1.234-1.108-2.67-1.437-4.172l-0.023-0.128h4.44c-0.352 1.63-0.855 3.066-1.51 4.415l0.050-0.115c-0.24 0-0.5 0-0.76 0s-0.48 0-0.76 0zM13.040 17.52c0.431-1.046 0.798-2.28 1.041-3.558l0.019-0.122h3.040c-0.902 1.642-2.308 2.912-4.006 3.62l-0.054 0.020z">
+                                    </path>
+                                </svg></i>
+                            <span>English</span>
+                            <i class="sc-rbbb40-1 iFnyeo" size="15" color="#1C1C1C"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 jKmKoK">
+                                    <title>chevron-down</title>
+                                    <path
+                                        d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                                    </path>
+                                </svg></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cstm-f-row-2 ">
+                    <div class="col-12 col-sm-6 col-md-2 me-sm-0 me-md-5">
+                        <h3 class="footer-content-heading">ABOUT ZOMATO</h3>
+                        <div class="footer-links ">
+                            <a class="text-decoration-none text-secondary " href="#">Who We Are</a>
+                            <a class="text-decoration-none text-secondary " href="#">Blog</a>
+                            <a class="text-decoration-none text-secondary " href="#">Work With Us</a>
+                            <a class="text-decoration-none text-secondary " href="#">Investor Relations</a>
+                            <a class="text-decoration-none text-secondary " href="#">Report Fraud</a>
+                            <a class="text-decoration-none text-secondary " href="#">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-2 me-sm-0 me-md-5 mt-4 mt-sm-0">
+                        <h3 class="footer-content-heading">ZOMAVERSE</h3>
+                        <div class="footer-links">
+                            <a class="text-decoration-none text-secondary " href="#">Zomato</a>
+                            <a class="text-decoration-none text-secondary " href="#">Feeding India</a>
+                            <a class="text-decoration-none text-secondary " href="#">Hyperpure</a>
+                            <a class="text-decoration-none text-secondary " href="#">Zomaland</a>                                          
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-2 me-sm-0 me-md-5 mt-4 mt-md-0">
+                        <h3 class="footer-content-heading">FOR RESTAURANTS</h3>
+                        <div class="footer-links">
+                            <a class="text-decoration-none text-secondary " href="#">Partner with us</a>
+                            <a class="text-decoration-none text-secondary " href="#">Apps for you</a>
+
+                            <h3 class="footer-content-heading mt-5">FOR ENTERPRISES</h3>
+                            <a class="text-decoration-none text-secondary " href="#">Zomato For Work</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-2 me-sm-0 me-md-5 mt-4 mt-md-0">
+                        <h3 class="footer-content-heading">LEARN MORE</h3>
+                        <div class="footer-links">
+                            <a class="text-decoration-none text-secondary " href="#">Privacy</a>
+                            <a class="text-decoration-none text-secondary " href="#">Security</a>
+                            <a class="text-decoration-none text-secondary " href="#">Terms</a>
+                            <a class="text-decoration-none text-secondary " href="#">Sitemap</a>                                          
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-2  mt-4 mt-md-0">
+                        <h3 class="footer-content-heading">SOCIAL LINKS</h3>
+                        <div class="footer-links">
+                            <div class="social-links d-flex justify-content-between">
+                                <div>
+                                    <a href="#">
+                                        <i class="sc-rbbb40-1 iFnyeo" size="22" color="#1C1C1C">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM7.0625 8.375H4.75V15.4375H7.0625V8.375ZM7.25 6.1875C7.25 5.5 6.75 5 5.9375 5C5.125 5 4.5625 5.5 4.5625 6.1875C4.5625 6.875 5.0625 7.4375 5.875 7.4375C6.6875 7.4375 7.25 6.875 7.25 6.1875ZM15.5 11.375C15.5 9.1875 14.3125 8.1875 12.8125 8.1875C11.5625 8.1875 11 8.875 10.6875 9.375V8.375H8.375C8.375 9.0625 8.375 15.4375 8.375 15.4375H10.6875V11.5C10.6875 11.3125 10.6875 11.0625 10.75 10.9375C10.9375 10.5 11.3125 10.0625 11.9375 10.0625C12.75 10.0625 13.125 10.6875 13.125 11.6875V15.4375H15.4375C15.5 15.4375 15.5 11.375 15.5 11.375Z"></path></svg>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <i class="sc-rbbb40-1 iFnyeo" size="22" color="#1C1C1C">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.1875 5C8.8125 5 8.625 5 8.0625 5C7.5 5.0625 7.125 5.125 6.8125 5.25C6.5 5.375 6.1875 5.5625 5.875 5.875C5.5625 6.1875 5.375 6.4375 5.25 6.8125C5.125 7.125 5 7.5 5 8.0625C5 8.625 5 8.75 5 10.1875C5 11.625 5 11.8125 5.0625 12.375C5.0625 12.9375 5.1875 13.3125 5.3125 13.625C5.4375 13.9375 5.625 14.25 5.9375 14.5625C6.1875 14.8125 6.5 15 6.875 15.1875C7.1875 15.3125 7.5625 15.4375 8.125 15.4375C8.6875 15.4375 8.875 15.5 10.25 15.5C11.6875 15.5 11.875 15.5 12.4375 15.4375C13 15.375 13.375 15.3125 13.6875 15.1875C14 15.0625 14.3125 14.875 14.625 14.5625C14.9375 14.25 15.125 14 15.25 13.625C15.375 13.3125 15.5 12.875 15.5 12.375C15.5625 11.8125 15.5625 11.625 15.5625 10.1875C15.5625 8.75 15.5625 8.625 15.5 8.0625C15.5 7.5 15.375 7.125 15.25 6.8125C15.125 6.4375 14.9375 6.1875 14.625 5.875C14.375 5.625 14.0625 5.4375 13.6875 5.25C13.375 5.125 12.9375 5.0625 12.4375 5C11.8125 5 11.625 5 10.1875 5ZM9.75 5.9375C9.875 5.9375 10.0625 5.9375 10.1875 5.9375C11.5625 5.9375 11.75 5.9375 12.3125 5.9375C12.8125 5.9375 13.0625 6.0625 13.25 6.125C13.5 6.25 13.6875 6.375 13.875 6.5C14.0625 6.625 14.1875 6.8125 14.25 7.125C14.3125 7.3125 14.4375 7.5625 14.4375 8.0625C14.5 8.625 14.5 8.8125 14.5 10.1875C14.5 11.5625 14.5 11.75 14.4375 12.3125C14.4375 12.8125 14.3125 13.125 14.25 13.3125C14.1875 13.5625 14.0625 13.6875 13.875 13.9375C13.6875 14.125 13.5 14.1875 13.25 14.3125C13.0625 14.375 12.8125 14.5 12.3125 14.5C11.75 14.5 11.5625 14.5625 10.1875 14.5625C8.8125 14.5625 8.625 14.5625 8.0625 14.5C7.5625 14.5 7.3125 14.375 7.125 14.3125C6.875 14.1875 6.6875 14.125 6.5 13.9375C6.3125 13.75 6.1875 13.5625 6.125 13.3125C6.0625 13.125 6 12.875 5.9375 12.3125C5.9375 11.75 5.9375 11.625 5.9375 10.1875C5.9375 8.8125 5.9375 8.625 5.9375 8.0625C6 7.5625 6.0625 7.3125 6.125 7.125C6.25 6.875 6.375 6.6875 6.5 6.5C6.625 6.3125 6.875 6.1875 7.125 6.125C7.3125 6.0625 7.5625 5.9375 8.0625 5.9375C8.5625 5.9375 8.75 5.9375 9.75 5.9375ZM13 6.8125C12.6875 6.8125 12.375 7.0625 12.375 7.4375C12.375 7.8125 12.625 8.0625 13 8.0625C13.375 8.0625 13.625 7.8125 13.625 7.4375C13.625 7.0625 13.3125 6.8125 13 6.8125ZM10.1875 7.5C8.75 7.5 7.5 8.6875 7.5 10.1875C7.5 11.6875 8.6875 12.875 10.1875 12.875C11.6875 12.875 12.875 11.6875 12.875 10.1875C12.875 8.6875 11.6875 7.5 10.1875 7.5ZM10.1875 8.4375C11.125 8.4375 11.9375 9.1875 11.9375 10.1875C11.9375 11.1875 11.1875 11.9375 10.1875 11.9375C9.25 11.9375 8.4375 11.1875 8.4375 10.1875C8.4375 9.1875 9.25 8.4375 10.1875 8.4375Z"></path></svg>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <a href="#">
+                                        <i class="sc-rbbb40-1 iFnyeo" size="22" color="#1C1C1C">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.0625 8.125V8.5L9.6875 8.4375C8.3125 8.25 7.125 7.6875 6.125 6.6875L5.625 6.1875L5.5 6.5625C5.25 7.375 5.375 8.25 5.9375 8.8125C6.25 9.125 6.1875 9.1875 5.6875 9C5.5 8.9375 5.375 8.875 5.3125 8.9375C5.25 9 5.4375 9.6875 5.5625 9.9375C5.75 10.3125 6.1875 10.6875 6.5625 10.875L6.9375 11.0625H6.5C6.0625 11.0625 6.0625 11.0625 6.125 11.25C6.3125 11.75 6.875 12.25 7.5625 12.5L8 12.6875L7.625 12.9375C7 13.3125 6.3125 13.5 5.625 13.5C5.3125 13.5 5 13.5625 5 13.5625C5 13.625 5.9375 14.0625 6.4375 14.25C8.0625 14.75 9.9375 14.5 11.375 13.6875C12.375 13.0625 13.375 11.875 13.875 10.75C14.125 10.125 14.375 9 14.375 8.5C14.375 8.1875 14.4375 8.125 14.8125 7.6875C15.0625 7.4375 15.3125 7.1875 15.3125 7.0625C15.375 6.9375 15.375 6.9375 15 7.0625C14.375 7.3125 14.25 7.25 14.625 6.875C14.875 6.625 15.125 6.1875 15.125 6.0625C15.125 6.0625 15 6.0625 14.875 6.125C14.75 6.1875 14.4375 6.3125 14.1875 6.375L13.8125 6.5L13.5 6.25C13.3125 6.125 13 5.9375 12.875 5.9375C12.5 5.8125 11.9375 5.8125 11.5625 6C10.5625 6.25 10 7.1875 10.0625 8.125Z"></path></svg>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <a href="#">
+                                        <i class="sc-rbbb40-1 iFnyeo" size="22" color="#1C1C1C">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM15.1875 7.4375C15.0625 7 14.6875 6.625 14.25 6.5C13.4375 6.25 10.1875 6.25 10.1875 6.25C10.1875 6.25 6.9375 6.25 6.125 6.5C5.6875 6.625 5.3125 7 5.1875 7.4375C5 8.25 5 10 5 10C5 10 5 11.75 5.25 12.5625C5.375 13 5.75 13.375 6.1875 13.5C7 13.75 10.25 13.75 10.25 13.75C10.25 13.75 13.5 13.75 14.3125 13.5C14.75 13.375 15.125 13 15.25 12.5625C15.5 11.75 15.5 10 15.5 10C15.5 10 15.4375 8.25 15.1875 7.4375ZM9.25 11.75V8.5L11.875 10.125L9.25 11.75Z"></path></svg>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <a href="#">
+                                        <i class="sc-rbbb40-1 iFnyeo" size="22" color="#1C1C1C">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.75 15.4375V10.1875H12.1875L12.375 8.375H10.75V7.5C10.75 7.0625 10.8125 6.8125 11.5 6.8125H12.375V5H10.9375C9.1875 5 8.625 5.875 8.625 7.3125V8.375H7.5V10.1875H8.5625V15.4375C8.5625 15.4375 10.75 15.4375 10.75 15.4375Z"></path></svg>
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store-images d-flex flex-row  flex-sm-column justify-content-center ">
+                                <div class="F-store-img mt-4">
+                                    <img src="./images/appstore.webp" alt="">
+                                </div>
+                                <div class="F-store-img mt-4 ms-2 ms-sm-0">
+                                    <img src="./images/playstor.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="copy-right d-flex flex-column justify-content-center align-items-center">
+                    <h4>&copy; Copyright 2022</h4>
+                    <h2>&nbsp; Manoj bhatt&nbsp;</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
